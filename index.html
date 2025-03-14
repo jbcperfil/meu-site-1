@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua compra!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #254278, #4a7c9c);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2); /* branco com 20% de opacidade */
+            backdrop-filter: blur(10px); /* efeito de vidro (blur) */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background: linear-gradient(135deg, #254278, #2e5b80);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 320px;
+            text-decoration: none; /* Remove subline */
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #2e5b80, #1c3f6e);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #254278, #2e5b80);
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #2e5b80, #1c3f6e);
+        }
+
+        #response {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+                max-width: 95%;
+            }
+            button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2><b>Obrigado pela sua compra! 🎉</b></h2> 
+        <p>Agradecemos muito por confiar em nossos produtos! 😊</p>
+        <p>Ficamos curiosos para saber sua opinião sobre o produto. Se possível, compartilhe uma foto e sua avaliação conosco! 📸</p>
+        <p>Sua avaliação é essencial para nós e para outros clientes! 💬</p>
+        
+        <div class="buttons">
+            <button onclick="showMessage('Muito obrigado pela sua avaliação!')">Já Avaliei</button>
+            <a href="https://wa.me/5511942921020" target="_blank">
+                <button class="whatsapp-btn"><i class="fa fa-whatsapp"></i>Preciso de Ajuda</button>
+            </a>
+        </div>
+
+        <div id="response"></div>
+    </div>
+
+    <script>
+        function showMessage(message) {
+            let response = document.getElementById("response");
+            response.innerHTML = `<p>${message}</p>`;
+        }
+    </script>
+
+    <!-- Importando o Font Awesome para o ícone do WhatsApp -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
